@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+#bant2{height:auto; background:#F8F8F8;}
+#bant2 h1{ font-size: 50px; margin-bottom: 20px; margin-top: 40px;}
+#bant2 .row{ text-align: center;}
+#kart{ width: 420px; height: 350px; box-shadow: 0px 0px 22px 0px rgba(36,64,33,0.33);  text-align: center; margin:auto; border-radius: 10px; margin-bottom: 20px; overflow: hidden; padding-top: 15px;}
+
+
+
+
+/* style.css */
+
+
+#yildiz-arkaplan {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('path/to/star.png') repeat-y 0 100%;
+  animation: yildizHareket 30s linear infinite;
+}
+
+@keyframes yildizHareket {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* Yıldızlar */
+.yildiz {
+  position: absolute;
+  width: 10px; /* Yıldız genişliği */
+  height: 10px; /* Yıldız yüksekliği */
+  background-color:#EFD58B;
+  border-radius: 50%;
+  animation: yildizYukari linear infinite;
+    box-shadow: 0 0 10px rgba(236,255,267, 0.5); /* Gölge ekleniyor */
+}
+
+@keyframes yildizYukari {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100vh);
+  }
+}
+
+/* Yıldızların arasındaki gecikme */
+.yildiz:nth-child(1) {
+  animation-delay: 0s; /* İlk yıldızda gecikme yok */
+}
+
+.yildiz:nth-child(1) {
+  animation-delay: 1s; /* İkinci yıldız 1 saniye gecikmeli başlasın */
+}
+
+/* Diğer yıldızlara gecikme değerleri ekleyebilirsiniz */
+@keyframes parlama {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 2;
+  }
+}
